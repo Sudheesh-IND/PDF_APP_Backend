@@ -66,7 +66,7 @@ exports.getAllPdf = async (req, res) => {
     //getting the user id fromapi link
     const {userId}=req.params
     //getting all the details
-    const response = await Pdf.find()
+    const response = await Pdf.find({userId})
     //sending the response back
     res.status(200).json(response)
 
